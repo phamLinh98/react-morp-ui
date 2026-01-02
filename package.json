@@ -4,6 +4,7 @@
   "description": "Modern React UI components built with TailwindCSS",
   "type": "module",
   "main": "dist/index.cjs.js",
+  "style": "dist/style.css",
   "module": "dist/index.esm.js",
   "files": [
     "dist"
@@ -18,11 +19,10 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "rollup -c",
     "lint": "eslint .",
     "preview": "vite preview",
-    "prepublishOnly": "npm run build",
-    "patch": "npm version patch"
+    "build:css": "tailwindcss -i ./src/styles.css -o ./dist/style.css --minify",
+    "build": "npm run build:css && rollup -c"
   },
   "peerDependencies": {
     "react": ">=17",
