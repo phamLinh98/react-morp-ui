@@ -22,7 +22,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "build:css": "tailwindcss -i ./src/styles.css -o ./dist/style.css --minify",
-    "build": "npm run build:css && rollup -c"
+    "build": "npm run build:css && rollup -c",
+    "build-sc":"npm run build"
   },
   "peerDependencies": {
     "react": ">=17",
