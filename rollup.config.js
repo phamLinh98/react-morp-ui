@@ -18,11 +18,15 @@ export default {
     ],
     plugins: [
         peerDepsExternal(),
-        resolve(),
+        resolve({
+            extensions: ['.js', '.jsx'],
+        }),
         commonjs(),
         babel({
             babelHelpers: 'bundled',
             presets: ['@babel/preset-react'],
+            extensions: ['.js', '.jsx'],
+            exclude: 'node_modules/**',
         }),
     ],
 };
