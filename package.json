@@ -22,8 +22,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "prepublishOnly": "npm run build",
-    "patch": "npm version patch",
-    "publish": "npm publish "
+    "patch": "npm version patch"
   },
   "peerDependencies": {
     "react": ">=17",
