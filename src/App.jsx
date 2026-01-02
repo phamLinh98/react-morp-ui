@@ -90,7 +90,29 @@ export default function App() {
           </p>
         </header>
 
-        {/* ===== BASIC ===== */}
+        {/* ===== INSTALL COMMAND ===== */}
+        <DemoBlock
+          title="Installation"
+          preview={
+            <div className="flex items-center justify-center gap-2 bg-gray-900 text-green-400 px-4 py-3 rounded-lg font-mono text-sm">
+              <span>npm install @phamlinh98/react-morp-ui@latest</span>
+              <button
+                onClick={() => {
+                  navigator.clipboard.writeText(
+                    "npm install @phamlinh98/react-morp-ui@latest"
+                  );
+                }}
+                className="ml-auto px-2 py-1 bg-gray-700 hover:bg-gray-600 text-white rounded text-xs transition-colors"
+                >
+                Copy
+                </button>
+              </div>
+              }
+              code={`import '@phamlinh98/react-morp-ui/dist/style.css';
+       import { Button, Tabs } from '@phamlinh98/react-morp-ui';`}
+            />
+
+            {/* ===== BASIC ===== */}
         <DemoBlock
           title="Basic Variants"
           preview={
@@ -189,9 +211,7 @@ export default function App() {
 
         {/* ===== FOOTER ===== */}
         <footer className="text-center mt-20 text-gray-600 text-sm">
-          Built with ❤️ using React + TailwindCSS
-          <br />
-          No external UI dependencies
+          Built with ❤️ copyright © 2026 by Linhthusinh98
         </footer>
       </div>
     </div>

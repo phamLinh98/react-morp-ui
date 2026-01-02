@@ -22,11 +22,11 @@ const DemoBlock = ({ title, preview, code }) => {
 
             {/* Toggle */}
             <Button
-                variant="ghost-primary"
+                variant="primary"
                 size="sm"
                 onClick={() => setOpen(!open)}
             >
-                {open ? 'Hide code' : 'Show code'}
+                {open ? 'Hide' : 'Show'}
             </Button>
 
             {/* Code Panel */}
