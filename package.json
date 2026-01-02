@@ -21,7 +21,9 @@
     "build": "rollup -c",
     "lint": "eslint .",
     "preview": "vite preview",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "patch": "npm version patch",
+    "publish": "npm publish "
   },
   "peerDependencies": {
     "react": ">=17",
