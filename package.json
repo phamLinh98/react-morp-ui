@@ -24,7 +24,8 @@
     "preview": "vite preview",
     "build:css": "tailwindcss -i ./src/styles.css -o ./dist/style.css --minify",
     "build": "npm run build:css && rollup -c",
-    "build-sc":"npm run build"
+    "build-sc":"npm run build",
+    "build:demo": "vite build --config vite.demo.config.js"
   },
   "peerDependencies": {
     "react": ">=17",
