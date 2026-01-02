@@ -1,6 +1,6 @@
 {
   "name": "@phamlinh98/react-morp-ui",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "description": "Modern React UI components built with TailwindCSS",
   "type": "module",
   "main": "dist/index.cjs.js",
