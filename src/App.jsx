@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "./components/Button";
+import { Tabs } from "./components/Tabs";
 import DemoBlock from "./DemoBlock";
 import "./App.css";
 
@@ -209,7 +210,102 @@ export default function App() {
           code={`<Button loading>Loading...</Button>`}
         />
 
-        {/* ===== FOOTER ===== */}
+        {/* ===== TABS - VARIANTS ===== */}
+        <DemoBlock
+          title="Tabs - Line Variant"
+          preview={
+            <Tabs
+              variant="line"
+              className="bg-white rounded-lg shadow-sm"
+              items={[
+                { key: '1', label: 'Profile', icon: <HeartIcon />, children: <div className="p-4">✨ Profile content with beautiful gradient and animations</div> },
+                { key: '2', label: 'Settings', icon: <PlusIcon />, children: <div className="p-4">⚙️ Configure your preferences here</div> },
+                { key: '3', label: 'Downloads', icon: <DownloadIcon />, children: <div className="p-4">📥 Your download history</div> },
+              ]}
+            />
+          }
+          code={`<Tabs variant="line" items={[...]} />`}
+        />
+
+        <DemoBlock
+          title="Tabs - Rounded Card Variant"
+          preview={
+            <Tabs
+              variant="rounded-card"
+              size="md"
+              className="bg-white rounded-lg shadow-sm p-4"
+              items={[
+                { key: '1', label: 'Dashboard', children: <div className="p-4">🎨 Beautiful gradient design with rounded cards</div> },
+                { key: '2', label: 'Analytics', children: <div className="p-4">📊 View your stats and analytics</div> },
+                { key: '3', label: 'Reports', children: <div className="p-4">📈 Generate detailed reports</div> },
+              ]}
+            />
+          }
+          code={`<Tabs variant="rounded-card" items={[...]} />`}
+        />
+
+        <DemoBlock
+          title="Tabs - Pill Variant"
+          preview={
+            <Tabs
+              variant="pill"
+              centered
+              className="bg-white rounded-lg shadow-sm p-4"
+              items={[
+                { key: '1', label: 'Overview', children: <div className="p-4 text-center">🌟 Smooth pill-shaped tabs</div> },
+                { key: '2', label: 'Features', children: <div className="p-4 text-center">⚡ Explore amazing features</div> },
+                { key: '3', label: 'Pricing', children: <div className="p-4 text-center">💎 Check our plans</div> },
+              ]}
+            />
+          }
+          code={`<Tabs variant="pill" centered items={[...]} />`}
+        />
+
+        <DemoBlock
+          title="Tabs - Edged Card Variant"
+          preview={
+            <Tabs
+              variant="edged-card"
+              className="bg-white rounded-lg shadow-sm p-4"
+              items={[
+                { key: '1', label: 'Design', children: <div className="p-4">🎯 Modern edged card with stunning gradients</div> },
+                { key: '2', label: 'Development', children: <div className="p-4">💻 Development tools and resources</div> },
+                { key: '3', label: 'Testing', children: <div className="p-4">🧪 Quality assurance and testing</div> },
+              ]}
+            />
+          }
+          code={`<Tabs variant="edged-card" items={[...]} />`}
+        />
+
+        <DemoBlock
+          title="Tabs - With Icons & Sizes"
+          preview={
+            <div className="space-y-8">
+              <Tabs
+                variant="rounded-card"
+                size="lg"
+                className="bg-white rounded-lg shadow-sm p-4"
+                items={[
+                  { key: '1', label: 'Favorites', icon: <HeartIcon />, children: <div className="p-5 text-lg">❤️ Large size with icons</div> },
+                  { key: '2', label: 'Downloads', icon: <DownloadIcon />, children: <div className="p-5 text-lg">📦 Your downloads</div> },
+                ]}
+              />
+              <Tabs
+                variant="pill"
+                size="sm"
+                className="bg-white rounded-lg shadow-sm p-3"
+                items={[
+                  { key: '1', label: 'Create', icon: <PlusIcon />, children: <div className="p-3 text-sm">➕ Small compact tabs</div> },
+                  { key: '2', label: 'Delete', icon: <TrashIcon />, children: <div className="p-3 text-sm">🗑️ Remove items</div> },
+                ]}
+              />
+            </div>
+          }
+          code={`<Tabs variant="rounded-card" size="lg" items={[...]} />
+<Tabs variant="pill" size="sm" items={[...]} />`}
+        />
+
+          {/* ===== FOOTER ===== */}
         <footer className="text-center mt-20 text-gray-600 text-sm">
           Built with ❤️ copyright © 2026 by Linhthusinh98
         </footer>
